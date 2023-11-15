@@ -25,3 +25,11 @@ Two build scripts are included:
   - `build_sparta.sh` is used to generate SPARTA executable file for CPU;
   - `build_sparta_kokkos.sh` is used to generate SPARTA executable file for GPU;
   - Note: to build the second executable after building the first one, need to do `make purge` in the "src/" directory.
+
+To build the SPARTA executable, do the following:
+- create a `build` folder inside the SPARTA source file directory;
+- copy the build script, for example `build_polaris.sh` into the `build` directory;
+- use `./build_polaris` to perform CMAKE configuration and build;
+- The final binary executable file will be stored in a separate folder called `install/bin` inside the SPARTA source file directory.
+- User may be able to ajust the CMAKE configuration option to perform an out-of-source build.
+
