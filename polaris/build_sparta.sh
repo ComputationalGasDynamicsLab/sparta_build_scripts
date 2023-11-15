@@ -9,11 +9,11 @@ export buildroot=$PWD
 export srcroot=$buildroot/../
 export installroot=$buildroot/../install
 
-cmake $srcroot -DCMAKE_BUILD_TYPE=Release \
+cmake $srcroot/cmake \
+               -DCMAKE_BUILD_TYPE=Release \
 	       -DCMAKE_CXX_COMPILER=CC \
 	       -DCMAKE_INSTALL_PREFIX=$installroot \
-               -DSPARTA_MACHINE=polaris \
-               $srcroot/cmake
+               -DSPARTA_MACHINE=polaris
 make -j4 install
 # optional flag to enable other SPARTA options
 # -DSPARTA_DEFAULT_CXX_COMPILE_FLAGS="-DSPARTA_BIGBIG"
