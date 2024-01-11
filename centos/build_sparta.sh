@@ -7,6 +7,6 @@ cmake $srcroot/cmake \
       -DCMAKE_CXX_COMPILER=mpicxx \
       -DBUILD_JPEG=ON \
       -DBUILD_PNG=ON \
-      -DSPARTA_MACHINE=stokes
+      -DSPARTA_MACHINE=stokes \
       -DCMAKE_INSTALL_PREFIX=$installroot
 make -j4 install
