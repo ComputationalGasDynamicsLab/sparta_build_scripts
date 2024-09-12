@@ -9,6 +9,7 @@ cmake $srcroot/cmake \
        -DSPARTA_ENABLE_TESTING=OFF \
        -DPKG_KOKKOS=ON \
        -DBUILD_KOKKOS=ON \
+       -DBUILD_PNG=ON \
        -DKokkos_ARCH_PASCAL61=ON \
        -DKokkos_ENABLE_CUDA=on \
        -DKokkos_ENABLE_CUDA_LAMBDA=on \
