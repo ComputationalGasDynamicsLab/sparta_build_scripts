@@ -8,6 +8,7 @@ cmake $srcroot/cmake \
        -DSPARTA_MACHINE=kokkos_stokes \
        -DSPARTA_ENABLE_TESTING=OFF \
        -DPKG_KOKKOS=ON \
+       -DPKG_FFT=ON \
        -DBUILD_KOKKOS=ON \
        -DBUILD_PNG=ON \
        -DKokkos_ARCH_PASCAL61=ON \
