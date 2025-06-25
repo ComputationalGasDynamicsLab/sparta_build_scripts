@@ -4,21 +4,23 @@
 in [ALCF User Guides](https://docs.alcf.anl.gov/polaris/getting-started/). 
 
 #### Build instruction:
-We use `gcc 11.2.0`, `cuda 11.8.0`, `cray-mpich/8.1.16`, and `cmake/3.23.2` by loading:
+We use `nvhpc/8.5.0`, `cray-mpich/8.1.28`, and `cmake/3.27.9` by loading:
 ```
-module load PrgEnv-gnu/8.3.3
-module load cudatoolkit-standalone/11.8.0
-module load cmake/3.23.2
+module load PrgEnv-nvhpc/8.5.0
+module load cray-mpich/8.1.28
+module use /soft/modulefiles
+module load spack-pe-base cmake
 ```
-Note: `cray-mpich/8.1.16` is loaded by default.
+Note: `PrgEnv-nvhpc/8.5.0`, `cray-mpich/8.1.16` are loaded by default.
 
 With this, the loaded modules are:
 ```
 Currently Loaded Modules:
-  1) craype-x86-rome          5) craype-accel-nvidia80   9) cray-mpich/8.1.16    13) cray-libpals/1.1.7
-  2) libfabric/1.11.0.4.125   6) gcc/11.2.0             10) cray-pmi/6.1.2       14) PrgEnv-gnu/8.3.3
-  3) craype-network-ofi       7) craype/2.7.15          11) cray-pmi-lib/6.0.17  15) cudatoolkit-standalone/11.8.0
-  4) perftools-base/22.05.0   8) cray-dsmml/0.2.2       12) cray-pals/1.1.7      16) cmake/3.23.2
+  1) nvhpc/23.9               6) xalt/3.0.2-202408282050  11) cray-libpals/1.3.4   16) gcc-runtime/12.3.0-wfuxrgf
+  2) libfabric/1.15.2.0       7) craype/2.7.30            12) craype-x86-milan     17) nghttp2/1.57.0-zcqpkvo
+  3) craype-network-ofi       8) cray-dsmml/0.2.2         13) PrgEnv-nvhpc/8.5.0   18) curl/8.7.1-mrzub33
+  4) perftools-base/23.12.0   9) cray-pmi/6.1.13          14) cray-mpich/8.1.28    19) gmake/4.4.1
+  5) darshan/3.4.4           10) cray-pals/1.3.4          15) spack-pe-base/0.8.1  20) cmake/3.27.9
 ```
 
 Two build scripts are included:
